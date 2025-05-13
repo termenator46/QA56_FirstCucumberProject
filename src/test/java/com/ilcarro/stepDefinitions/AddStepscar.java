@@ -16,8 +16,8 @@ public class AddStepscar {
 
     @And("User enter infoData")
     public void Test1() {
-        new Letthecarwork(driver).EnterData("234", "65321", "Deluxe", "2", "1999", "Haifa, Israel", "Luminus", "Audi");
-        new Letthecarwork(driver).EnterData2("Gas");
+        new Letthecarwork(driver).EnterData("Haifa, Israel","Luminus","Audi","1993","Gas","4","Deluxe","48217","250");
+
     }
 
     @And("User click Submit button")

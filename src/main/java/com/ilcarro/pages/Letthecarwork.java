@@ -48,7 +48,7 @@ public class Letthecarwork extends Basepage {
     @FindBy(css = ".positive-button.ng-star-inserted")
     WebElement okButton;
 
-    public Letthecarwork EnterData(String Price, String registerNumber, String car_Clas, String Seats, String year, String location, String facture, String model) {
+    public Letthecarwork EnterData(String location ,String facture,String model,String year,String text, String Seats,String car_Clas,String registerNumber,String Price) {
         Locationinput.sendKeys(location);
         pause(1000);
        Locationinput.sendKeys(Keys.DOWN);
@@ -62,7 +62,7 @@ public class Letthecarwork extends Basepage {
         type(serialNumberinput, registerNumber);
         type(priceinput, Price);
         click(Sumbbit);
-
+        new Select(fuelinput).selectByVisibleText(text);
         return this;
 
     }
